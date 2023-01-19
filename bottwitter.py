@@ -1,3 +1,4 @@
+import os
 import tweepy
 import time
 import random
@@ -5,8 +6,8 @@ import json
 from credentials import key
 # api twitter
 
-auth = tweepy.OAuthHandler(key.get('API_KEY'), key.get('API_SECRET_KEY'))
-auth.set_access_token(key.get('ACESS_KEY'), key.get('ACESS_SECRET'))
+auth = tweepy.OAuthHandler(os.environ.get('API_KET'), os.environ.get('API_SECRET_KEY'))
+auth.set_access_token(os.environ.get('ACESS_KEY'), os.environ.get('ACESS_SECRET'))
 
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
