@@ -20,14 +20,13 @@ def sorteiaMusica():
     estrofesComRepeticao = musicaEscolhida["Letra"].split("\n\n")
     return estrofesComRepeticao
 
-
+# elimina estrofes repetidas e escolhe uma estrofe para se postada
 def sorteiaEstrofe(estrofesComRepeticao):
     estrofesUnicas = list(set(estrofesComRepeticao))
     estrofeEscolhida = random.choice(estrofesUnicas)
     return estrofeEscolhida
-    # print(estrofeEscolhida)
 
-
+# escolhe a qual amigo o tweet será direcionado
 def escolheAmigo():
     amigos = ['bottopaloma', 'sohguimesmo', 'torvicbz', 'kaorii_mari', 'gigimoeller', 'ji_piton', 'kathleenjbo', 'lrpoec', 'lah_quaggio',
               'nelisa_pb', 'lulisa_a', 'willrodx', 'mazeto__ana', 'lari_biazon', 'isacrts', 'ju_francaa', 'dudaaaaaaaf', 'mafelomba']
@@ -46,31 +45,21 @@ def postaTweet():
     user = escolheAmigo()
     musica = sorteiaMusica()
     estrofe = sorteiaEstrofe(musica)
-    # tweet = ".@" + user + " " + estrofe
-    tweet = "." + user + " " + estrofe
+    tweet = ".@" + user + " " + estrofe
     tamanhoTweet = len(tweet)
     if (tamanhoTweet > 279):
-        api.update_status(tweet[0:279])  # posta primeiro tweet
+        api.update_status(tweet[0:279])  # posta primeiro tweet, sem ser uma reply
         time.sleep(3)
-        print(tweet[0:279])
         i = 279
         while i < tamanhoTweet:
             id = pegaIdUltimoTweet()
             api.update_status(status=tweet[i:i+279], in_reply_to_status_id=id)
-            print("PROXIMO TWEET------------------")
-            print(tweet[i:i+279])
             time.sleep(3)
             i += 279
     else:
         api.update_status(tweet)
-        print(tweet)
-    # api.update_status('.@' + user + ' ')
-    # api.update_status('.@hugoferreirj ' + getLetraMusica())
-    # getLetraMusica()
 
 
 while True:
-    # _main()
     postaTweet()
-    time.sleep(30)
-    print("\n")
+    time.sleep(82800)
