@@ -62,5 +62,4 @@ def postaTweet():
 
 while True:
     postaTweet()
-    print("tweet postado")
-    time.sleep(60)
+    time.sleep(82800)
