@@ -63,4 +63,4 @@ def postaTweet():
 
 while True:
     postaTweet()
-    time.sleep(82800)
+    time.sleep(60)
