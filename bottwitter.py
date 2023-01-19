@@ -29,7 +29,7 @@ def sorteiaEstrofe(estrofesComRepeticao):
 # escolhe a qual amigo o tweet será direcionado
 def escolheAmigo():
     amigos = ['bottopaloma', 'sohguimesmo', 'torvicbz', 'kaorii_mari', 'gigimoeller', 'ji_piton', 'kathleenjbo', 'lrpoec', 'lah_quaggio',
-              'nelisa_pb', 'lulisa_a', 'willrodx', 'mazeto__ana', 'lari_biazon', 'isacrts', 'ju_francaa', 'dudaaaaaaaf', 'mafelomba']
+              'nelisa_pb', 'lulisa_a', 'willrodx', 'mazeto__ana', 'lari_biazon', 'isacrts', 'ju_francaa', 'dudaaaaaaaf', 'mafelomba', 'aaaaanlee', 'ribe3iro']
     return random.choice(amigos)
 
 # pega o id do ultimo tweet feito pela conta para responder em thread
