@@ -3,4 +3,6 @@ Esse projeto consiste em um bot que semanlmente posta um tweet com o verso de um
 
 O bot foi desenvolvido em python utilizando a API Tweepy. As letras das músicas são lidas de um arquivo JSON.
 
+O arquivo runtime.txt indica em qual versão do python o bot está rodando, enquanto o requirements.txt indica as dependências utilizadas por ele. Ambos são necessários para hospedar o bot no Railway.
+
 Bot no Twitter: @botdohugo
