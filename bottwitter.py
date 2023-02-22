@@ -61,7 +61,7 @@ def postaTweet():
     user = escolheAmigo()
     musica = sorteiaMusica()
     estrofe = sorteiaEstrofe(musica)
-    tweet = "." + user + " " + estrofe
+    tweet = ".@" + user + " " + estrofe
     tamanhoTweet = len(tweet)
     if (tamanhoTweet > 279):
         api.update_status(tweet[0:279])  # posta primeiro tweet, sem ser uma reply
