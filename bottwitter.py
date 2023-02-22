@@ -3,8 +3,8 @@ import tweepy
 import time
 import random
 import json
-from apiclient.discovery import build
-from apiclient.errors import HttpError
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 
 # api twitter
 
