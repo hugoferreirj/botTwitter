@@ -1,3 +1,5 @@
+!!!!! Devido a mudança nas políticas de planos do Twitter Developers, o bot está temporariamente suspenso !!!!!
+
 # botTwitter
 
 Esse projeto consiste em um bot que semanalmente posta um tweet com o verso de uma música sobre amizade e marca um dos meus amigos. Após postar o verso ele publica o link da música no youtube em resposta.
